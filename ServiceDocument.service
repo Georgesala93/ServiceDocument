@@ -1,0 +1,15 @@
+[Unit]
+Description=**Description of the Service**.
+After=network.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/npm start
+WorkingDirectory=/home/**USER**/web/ServiceDocument
+Restart=always
+RestartSec=5
+StandardOutput=syslog
+StandardError=syslog
